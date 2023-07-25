@@ -35,6 +35,7 @@ config = {'displayModeBar': True, 'displaylogo': False, 'modeBarButtonsToRemove'
 # Color lists
 
 colors = ['#D7F3FD', '#88D9FA', '#39C0F7', '#099DD7', '#044762']
+bar_colors = ['#39C0F7', '#002145']
 hh_colors = ['#D8EBD4', '#93CD8A', '#3DB54A', '#297A32', '#143D19']
 hh_type_color = ['#3949CE', '#3EB549', '#39C0F7']
 columns_color_fill = ['#F3F4F5', '#EBF9FE', '#F0FAF1']
@@ -81,7 +82,7 @@ layout = html.Div(children = [
                     html.H3(children = html.Strong('2026 Household Projections by Income Category'), className = 'subtitle-lgeo'),
                     # Table Description
                     html.Div([
-                        html.H6('This table shows the total number of households in 2016, for each household income category, as well as the projected gain (positive) or loss (negative) of households over the 10-year period between 2016 and 2026 by applying the percentage change from 2006-2016, to 2016 households.')
+                        html.H6('The following table shows the total number of households in 2016, for each household income category, as well as the projected gain (positive) or loss (negative) of households over the 10-year period between 2016 and 2026 by applying the percentage change from 2006-2016, to 2016 households.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Table
@@ -117,7 +118,7 @@ layout = html.Div(children = [
 
                     # Graph Description
                     html.Div([
-                        html.H6('This graph illustrates the above table, displaying the total number of households in 2016, for each income category, with the projected gain of households between 2016 and 2026 stacked on top, and the projected loss of household stacked underneath.')
+                        html.H6('The following graph illustrates the above table, displaying the total number of households in 2016, for each income category, with the projected gain of households between 2016 and 2026 stacked on top, and the projected loss of household stacked underneath.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Graph
@@ -145,7 +146,7 @@ layout = html.Div(children = [
                     # Table Description
 
                     html.Div([
-                        html.H6('This table shows the total number of households in 2016, for each household size category, as well as the projected gain (positive) or loss (negative) of households over the 10-year period between 2016 and 2026 by applying the percentage change from 2006-2016, to 2016 households.')
+                        html.H6('The following table shows the total number of households in 2016, for each household size category, as well as the projected gain (positive) or loss (negative) of households over the 10-year period between 2016 and 2026 by applying the percentage change from 2006-2016, to 2016 households.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Table
@@ -181,7 +182,7 @@ layout = html.Div(children = [
                     # Graph Description
 
                     html.Div([
-                        html.H6('This graph illustrates the above table, displaying the total number of households in 2016, for each size of household, with the projected gain of households between 2016 and 2026 stacked on top, and the projected loss of household stacked underneath.')
+                        html.H6('The following graph illustrates the above table, displaying the total number of households in 2016, for each size of household, with the projected gain of households between 2016 and 2026 stacked on top, and the projected loss of household stacked underneath.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Graph
@@ -207,7 +208,7 @@ layout = html.Div(children = [
                     # Table Description
 
                     html.Div([
-                        html.H6('This table shows the projected total number of households in 2026 by household size and income category.')
+                        html.H6('The following table shows the projected total number of households in 2026 by household size and income category.')
                     ], className = 'muni-reg-text-lgeo'),
                     
                     # Table
@@ -243,7 +244,7 @@ layout = html.Div(children = [
                     # Graph Description
 
                     html.Div([
-                        html.H6('This graph illustrates the above table, displaying the projected total number of households in 2026 by household size and income category. Each bar is broken out by the projected number of households within each income category.')
+                        html.H6('The following graph illustrates the above table, displaying the projected total number of households in 2026 by household size and income category. Each bar is broken out by the projected number of households within each income category.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Graph
@@ -271,7 +272,7 @@ layout = html.Div(children = [
                     # Table Description
 
                     html.Div([
-                        html.H6('This table shows the projected gain or loss of households by household size and income. These values represent projections for the period between 2016 and 2026.')
+                        html.H6('The following table shows the projected gain or loss of households by household size and income. These values represent projections for the period between 2016 and 2026.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Table
@@ -307,7 +308,7 @@ layout = html.Div(children = [
                     # Graph Description
 
                     html.Div([
-                        html.H6('This graph illustrates the above table, displaying the projected gain or loss of households between 2016 and 2026 for each size of household. Each bar is broken out by the projected number of households within each income category. Projected loss of households are stacked underneath.')
+                        html.H6('The following graph illustrates the above table, displaying the projected gain or loss of households between 2016 and 2026 for each size of household. Each bar is broken out by the projected number of households within each income category. Projected loss of households are stacked underneath.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Graph
@@ -331,7 +332,7 @@ layout = html.Div(children = [
                     html.H3(children = html.Strong('Municipal vs Regional Growth Rates'), className = 'subtitle-lgeo'),
 
                     # Description
-                    html.H6(['Comparing a local community’s growth rates to the growth rate of the region allows for insight into if the community is matching regional patterns of change. There are numerous potential causes for discrepencies, which are further discussed in ', html.A('the project methods.', href = 'https://hart.ubc.ca/wp-content/uploads/2023/03/HNA-Methodology.pdf', target="_blank")])
+                    html.H6(['Comparing a local community’s growth rates to the growth rate of the region allows for insight into if the community is matching regional patterns of change. There are numerous potential causes for discrepencies, which are further discussed in ', html.A('the project methods.', href = 'https://hart.ubc.ca/wp-content/uploads/2023/06/HNA-Methodology-06-09-2023.pdf', target="_blank")])
                 ], className = 'muni-reg-text-lgeo'),
 
 
@@ -382,7 +383,7 @@ layout = html.Div(children = [
                     # Graph Description
 
                     html.Div([
-                        html.H6('This graph illustrates the above table, displaying the projected household growth rates between 2016 and 2026 in the community and surrounding region for each income category.')
+                        html.H6('The following graph illustrates the above table, displaying the projected household growth rates between 2016 and 2026 in the community and surrounding region for each income category.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Graph
@@ -445,7 +446,7 @@ layout = html.Div(children = [
                     # Graph Description
 
                     html.Div([
-                        html.H6('This graph illustrates the above table, displaying the projected household growth rates between 2016 and 2026 in the community and surrounding region for each income category.')
+                        html.H6('The following graph illustrates the above table, displaying the projected household growth rates between 2016 and 2026 in the community and surrounding region for each income category.')
                     ], className = 'muni-reg-text-lgeo'),
 
                     # Graph
@@ -465,7 +466,7 @@ layout = html.Div(children = [
             # LGEO
 
             html.Div([
-                    'This dashboard was created in collaboration with ',  html.A('Licker Geospatial', href = 'https://www.lgeo.co/)', target="_blank"),' using Plotly.'
+                    'This dashboard was created in collaboration with ',  html.A('Licker Geospatial', href = 'https://www.lgeo.co/', target="_blank"),' using Plotly.'
                 ], className = 'lgeo-credit-text'),
 
 
@@ -628,7 +629,7 @@ def update_geo_figure6(geo, geo_c, scale, selected_columns):
         # Generating plot
         fig_new_proj_1 = go.Figure()
 
-        for i, c in zip(plot_df['Category'].unique(), colors[3:]):
+        for i, c in zip(plot_df['Category'].unique(), bar_colors):
             plot_df_frag = plot_df.loc[plot_df['Category'] == i, :]
             fig_new_proj_1.add_trace(go.Bar(
                 x = plot_df_frag['Income Category'],
@@ -719,7 +720,7 @@ def update_geo_figure6(geo, geo_c, scale, selected_columns):
 
         fig_new_proj_1 = make_subplots(rows=1, cols=2, subplot_titles=(f"{geo}", f"{geo_c}"), shared_yaxes=True, shared_xaxes=True)
 
-        for i, c in zip(plot_df['Category'].unique(), colors[3:]):
+        for i, c in zip(plot_df['Category'].unique(), bar_colors):
             plot_df_frag = plot_df.loc[plot_df['Category'] == i, :]
             fig_new_proj_1.add_trace(go.Bar(
                 x = plot_df_frag['Income Category'],
@@ -875,15 +876,15 @@ def plot2_new_projection(geo, IsComparison):
     table2['2026 Delta'] = np.round(updated_csd_filtered_2026_plot2.iloc[:,0],0)
     table2 = table2.drop(columns = ['Category'])
 
-    table2['Total'] = table2.sum(axis = 1)
+    table2['Total 2026 HHs'] = table2.sum(axis = 1)
     row_total_csd = table2.sum(axis=0)
     row_total_csd[0] = 'Total'
     table2.loc[len(table2['HH Category']), :] = row_total_csd
 
     if IsComparison != True:
-        table2.columns = ['HH Size', '2016 HHs', 'Projected Gain/Loss of HHs by 2026', 'Total']
+        table2.columns = ['HH Size', '2016 HHs', 'Projected Gain/Loss of HHs by 2026', 'Total 2026 HHs']
     else:
-        table2.columns = ['HH Size', '2016 HHs ', 'Projected Gain/Loss of HHs by 2026 ', 'Total ']
+        table2.columns = ['HH Size', '2016 HHs ', 'Projected Gain/Loss of HHs by 2026 ', 'Total 2026 HHs ']
 
     plot_df = pd.concat([table2_2016,
                         pd.DataFrame({'HH Category': hh_category,
@@ -934,7 +935,7 @@ def update_geo_figure7(geo, geo_c, scale, selected_columns):
         # Generating plot
         fig_new_proj_1 = go.Figure()
 
-        for i, c in zip(plot_df['Category'].unique(), colors[3:]):
+        for i, c in zip(plot_df['Category'].unique(), bar_colors):
             plot_df_frag = plot_df.loc[plot_df['Category'] == i, :]
             fig_new_proj_1.add_trace(go.Bar(
                                             x = plot_df_frag['HH Category'],
@@ -1025,7 +1026,7 @@ def update_geo_figure7(geo, geo_c, scale, selected_columns):
 
         fig_new_proj_1 = make_subplots(rows=1, cols=2, subplot_titles=(f"{geo}", f"{geo_c}"), shared_yaxes=True, shared_xaxes=True)
 
-        for i, c in zip(plot_df['Category'].unique(), colors[3:]):
+        for i, c in zip(plot_df['Category'].unique(), bar_colors):
             plot_df_frag = plot_df.loc[plot_df['Category'] == i, :]
             fig_new_proj_1.add_trace(go.Bar(
                 x = plot_df_frag['HH Category'],
@@ -1770,6 +1771,7 @@ def projections_2026_pop_income(geo, IsComparison):
     pop_2016 = []
     gr_csd = []
     gr_cd = []
+    tr_cd = []
     delta = []
 
     i_l = [
@@ -1784,10 +1786,12 @@ def projections_2026_pop_income(geo, IsComparison):
         p = updated_csd_filtered[f'Total - Private households by household type including census family structure -   Households with {i} - Total - Household size'].tolist()[0]
         g = updated_csd_filtered[f'2026 Population Growth Rate with {i}'].tolist()[0]
         g_cd = updated_cd_filtered[f'2026 Population Growth Rate with {i}'].tolist()[0]
+        t_cd = updated_cd_filtered[f'2026 Population Trend with {i}'].tolist()[0]
         d = updated_csd_filtered[f'2026 Population Delta with {i}'].tolist()[0]
         pop_2016.append(p)
         gr_csd.append(g)
         gr_cd.append(g_cd)
+        tr_cd.append(t_cd)
         delta.append(d)
 
     table = pd.DataFrame({'Income Category':  i_l, '2016 Pop.': pop_2016, 'Muni. Growth (%)': gr_csd, 'Regional Growth (%)': gr_cd, 'Delta(Muni. GR)': np.round(delta, 0)})
@@ -1797,7 +1801,7 @@ def projections_2026_pop_income(geo, IsComparison):
 
     table['Delta(Regional GR)'] = np.round(table['2016 Pop.'] * table['Regional Growth (%)'], 0)
     table['2026 Pop.(Muni.)'] = np.round(table['2016 Pop.'] + (table['2016 Pop.'] * table['Muni. Growth (%)']), 0)
-    table['2026 Pop.(Regional)'] = np.round(table['2016 Pop.'] + (table['2016 Pop.'] * table['Regional Growth (%)']), 0)
+    table['2026 Pop.(Regional)'] = tr_cd
 
     table_for_plot = table[['Income Category', 'Muni. Growth (%)', 'Regional Growth (%)']]
     table_for_plot.columns = ['Income Category', 'Municipal', 'Regional']
@@ -2152,6 +2156,7 @@ def projections_2026_pop_hh(geo, IsComparison):
     pop_2016 = []
     gr_csd = []
     gr_cd = []
+    tr_cd = []
     delta = []
 
     h_l = ['1 Person', '2 People', '3 People', '4 People', '5+ People']
@@ -2160,10 +2165,12 @@ def projections_2026_pop_hh(geo, IsComparison):
         p = updated_csd_filtered[f'Total - Private households by household type including census family structure - Total – Private households by household income proportion to AMHI_1 -   {i}'].tolist()[0]
         g = updated_csd_filtered[f'2026 Population Growth Rate {i} HH'].tolist()[0]
         g_cd = updated_cd_filtered[f'2026 Population Growth Rate {i} HH'].tolist()[0]
+        t_cd = updated_cd_filtered[f'2026 Population Trend {i} HH'].tolist()[0]
         d = updated_csd_filtered[f'2026 Population Delta {i} HH'].tolist()[0]
         pop_2016.append(p)
         gr_csd.append(g)
         gr_cd.append(g_cd)
+        tr_cd.append(t_cd)
         delta.append(d)
 
     table = pd.DataFrame({'HH Category':  h_l, '2016 Pop.': pop_2016, 'Muni. Growth (%)': gr_csd, 'Regional Growth (%)': gr_cd, 'Delta(Muni. GR)': np.round(delta, 0)})
@@ -2173,7 +2180,7 @@ def projections_2026_pop_hh(geo, IsComparison):
 
     table['Delta(Regional GR)'] = np.round(table['2016 Pop.'] * table['Regional Growth (%)'], 0)
     table['2026 Pop.(Muni.)'] = np.round(table['2016 Pop.'] + (table['2016 Pop.'] * table['Muni. Growth (%)']), 0)
-    table['2026 Pop.(Regional)'] = np.round(table['2016 Pop.'] + (table['2016 Pop.'] * table['Regional Growth (%)']), 0)
+    table['2026 Pop.(Regional)'] = tr_cd
 
     table_for_plot = table[['HH Category', 'Muni. Growth (%)', 'Regional Growth (%)']]
     table_for_plot.columns = ['HH Category', 'Municipal', 'Regional']

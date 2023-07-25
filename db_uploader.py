@@ -77,7 +77,7 @@ province_code_table = mapped_geo_code[['Province_Code', 'Province']].drop_duplic
 
 # Defining sqlalchemy engine
 
-engine = create_engine('sqlite:///L:\\Projects\\22005 - Housing Needs Assessment\\Scripts\\Dashboard\\Code_Package\\sources\\hart.db')#, echo=True)
+engine = create_engine('sqlite:///L:\\Projects\\22005 - Housing Needs Assessment\\Scripts\\Dashboard\\Code_Package_2016\\sources\\hart.db')#, echo=True)
 
 # Creating tables
 

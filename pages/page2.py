@@ -128,7 +128,7 @@ layout = html.Div(children = [
                 html.H3(children = html.Strong('Income Categories and Affordable Shelter Costs, 2016'), id = 'visualization3'),
                 # Description
                 html.Div([
-                    html.H6('This table shows the range of household incomes and affordable shelter costs for each income category, in 2015 dollar values, as well what percentage of the total number of households falls within each category.')
+                    html.H6('The following table shows the range of household incomes and affordable shelter costs for each income category, in 2015 dollar values, as well what percentage of the total number of households falls within each category.')
                 ], className = 'muni-reg-text-lgeo'),
 
             # Table
@@ -153,8 +153,16 @@ layout = html.Div(children = [
                         page_size= 10,
                         merge_duplicate_headers=True,
                         export_format = "xlsx",
-                        style_cell = {'font-family': 'Bahnschrift'},
-                        style_header = {'text-align': 'middle', 'fontWeight': 'bold'}
+                        style_data={'whiteSpace': 'normal', 'overflow': 'hidden',
+                                    'textOverflow': 'ellipsis'},
+                        style_cell={'font-family': 'Bahnschrift',
+                                    'height': 'auto',
+                                    'whiteSpace': 'normal',
+                                    'overflow': 'hidden',
+                                    'textOverflow': 'ellipsis'
+                                    },
+                        style_header={'textAlign': 'right', 'fontWeight': 'bold',
+                                      }
                     ),
                     html.Div(id='datatable-interactivity-container')
                 ], className = 'pg2-table-lgeo'
@@ -199,7 +207,7 @@ layout = html.Div(children = [
                 html.H3(children = html.Strong('Percentage of Households in Core Housing Need, by Income Category and HH Size, 2016'), id = 'visualization2'),
                 # Description
                 html.Div([
-                    html.H6('This chart looks at those households in Core Housing Need and shows their relative distribution by household size (i.e. the number of individuals in a given houshold) for each household income category. When there is no bar for an income category, it means that either there are no households in Core Housing Need within an income category, or that there are too few households to report.')
+                    html.H6('The following chart looks at those households in Core Housing Need and shows their relative distribution by household size (i.e. the number of individuals in a given houshold) for each household income category. When there is no bar for an income category, it means that either there are no households in Core Housing Need within an income category, or that there are too few households to report.')
                 ], className = 'muni-reg-text-lgeo'),
 
 
@@ -226,7 +234,7 @@ layout = html.Div(children = [
                 html.H3(children = html.Strong('2016 Affordable Housing Deficit'), id = 'visualization4'),
                 # Description
                 html.Div([
-                    html.H6('This table shows the total number of households in Core Housing Need by household size and income category, which may be considered as the existing deficit of housing options in the community.')
+                    html.H6('The following table shows the total number of households in Core Housing Need by household size and income category, which may be considered as the existing deficit of housing options in the community.')
                 ], className = 'muni-reg-text-lgeo'),
 
 
@@ -251,9 +259,15 @@ layout = html.Div(children = [
                             selected_rows=[],
                             page_action="native",
                             page_current= 0,
-                            page_size= 10,
+                            page_size= 25,
                             merge_duplicate_headers=True,
-                            style_cell = {'font-family': 'Bahnschrift'},
+                            style_data={'whiteSpace': 'normal', 'overflow': 'hidden',
+                                        'textOverflow': 'ellipsis'},
+                            style_cell={'font-family': 'Bahnschrift',
+                                        'height': 'auto',
+                                        'whiteSpace': 'normal',
+                                        'overflow': 'hidden',
+                                        'textOverflow': 'ellipsis'},
                             style_header = {'text-align': 'middle', 'fontWeight': 'bold'},
                             export_format = "xlsx"
                         ),
@@ -272,7 +286,7 @@ layout = html.Div(children = [
                 html.H3(children = html.Strong('Percentage of Households in Core Housing Need by Priority Population, 2016'), id = 'visualization5'),
                 # Description
                 html.Div([
-                    html.H6('This chart compares the rates of Core Housing Need across populations that are at high risk of experiencing housing need. The "Community (all HH)" bar represents the rate of Core Housing Need for all households in the selected community to act as a point of reference. The population with the greatest rate of Core Housing Need is highlighted in dark blue. When there is no bar for a priority population, it means that either there are no households in Core Housing Need within that priority population, or that there are too few households to report.')
+                    html.H6('The following chart compares the rates of Core Housing Need across populations that are at high risk of experiencing housing need. The "Community (all HH)" bar represents the rate of Core Housing Need for all households in the selected community to act as a point of reference. The population with the greatest rate of Core Housing Need is highlighted in dark blue. When there is no bar for a priority population, it means that either there are no households in Core Housing Need within that priority population, or that there are too few households to report.')
                 ], className = 'muni-reg-text-lgeo'),
 
                 # Graphs
@@ -296,7 +310,7 @@ layout = html.Div(children = [
                 html.H3(children = html.Strong('Percentage of Households in Core Housing Need by Priority Population and Income Category, 2016'), id = 'visualization6'),
                 # Description
                 html.Div([
-                    html.H6('This chart looks at those households in Core Housing Need for each priority population and shows their relative distribution by household income category. When there is no bar for a priority population, it means that either there are no households in Core Housing Need within that priority population, or that there are too few households to report.')
+                    html.H6('The following chart looks at those households in Core Housing Need for each priority population and shows their relative distribution by household income category. When there is no bar for a priority population, it means that either there are no households in Core Housing Need within that priority population, or that there are too few households to report.')
                 ], className = 'muni-reg-text-lgeo'),
 
                 # Graphs
@@ -328,7 +342,7 @@ layout = html.Div(children = [
         # LGEO
 
             html.Div([
-                    'This dashboard was created in collaboration with ',  html.A('Licker Geospatial', href = 'https://www.lgeo.co/)', target="_blank"),' using Plotly.'
+                    'This dashboard was created in collaboration with ',  html.A('Licker Geospatial', href = 'https://www.lgeo.co/', target="_blank"),' using Plotly.'
                 ], className = 'lgeo-credit-text'),
 
 
@@ -382,6 +396,11 @@ style_header_conditional=[
         'backgroundColor': '#39C0F7',
         'color': '#000000'
     },
+    {
+        'if': {'header_index': 2},
+        'backgroundColor': '#39C0F7',
+        'color': '#000000'
+    }
 ]
 
 
@@ -407,6 +426,12 @@ def table_amhi_shelter_cost(geo, IsComparison):
     for s in shelter_range:
         shelter_list.append(joined_df_filtered[s].tolist()[0])
 
+    joined_df_geo_index = joined_df_filtered.set_index('Geography')
+    # pdb.set_trace()
+    median_income = '${:0,.0f}'.format(float(joined_df_geo_index.at[geo, 'Median income of household ($)']))
+    # print(joined_df_geo_index.at[geo, 'Median income of household ($)'])
+    median_rent = '${:0,.0f}'.format(float(joined_df_geo_index.at[geo, 'Rent AMHI']))
+
     if IsComparison != True:
         table = pd.DataFrame({'Income Category': income_ct, '% of Total HHs': portion_of_total_hh , 'Annual HH Income': amhi_list, 'Affordable Shelter Cost (2015 CAD$)': shelter_list})
         table['% of Total HHs'] = table['% of Total HHs'].astype(str) + '%'
@@ -414,7 +439,7 @@ def table_amhi_shelter_cost(geo, IsComparison):
         table = pd.DataFrame({'Income Category': income_ct, '% of Total HHs ': portion_of_total_hh , 'Annual HH Income ': amhi_list, 'Affordable Shelter Cost ': shelter_list})
         table['% of Total HHs '] = table['% of Total HHs '].astype(str) + '%'
 
-    return table
+    return table, median_income, median_rent
 
 
 # Callback logic for the table update
@@ -452,13 +477,15 @@ def update_table1(geo, geo_c, selected_columns, scale):
             geo = geo
 
         # Generating table
-        table = table_amhi_shelter_cost(geo, IsComparison = False)
+        table, median_income, median_rent = table_amhi_shelter_cost(geo, IsComparison = False)
     
         # Generating callback output to update table
         col_list = []
 
-        for i in table.columns:
-            col_list.append({"name": [geo, i], "id": i})
+        median_row = ['Area Median Household Income', "", median_income, median_rent]
+        for i, j in zip(list(table.columns), median_row):
+            col_list.append({"name": [geo, i, j], "id": i})
+        # Setting geography as index to fetch median rent and income data
 
         style_cell_conditional=[
             {
@@ -468,9 +495,20 @@ def update_table1(geo, geo_c, selected_columns, scale):
         ] + [
             {
                 'if': {'column_id': table.columns[0]},
-                'backgroundColor': columns_color_fill[0]
+                'backgroundColor': columns_color_fill[0],
             }
-        ]
+        ] + [
+           {
+               'if': {'column_id': 'Affordable Shelter Cost (2015 CAD$)'},
+               'maxWidth': "120px",
+           }
+       ] + [
+           {
+               'if': {'column_id': 'Income Category'},
+               'maxWidth': "120px",
+               'width': '35%'
+           }
+       ]
 
         return col_list, table.to_dict('record'), style_data_conditional, style_cell_conditional, style_header_conditional
 
@@ -492,7 +530,7 @@ def update_table1(geo, geo_c, selected_columns, scale):
         # Main Table
 
         # Generating main table
-        table = table_amhi_shelter_cost(geo, IsComparison = False)
+        table, median_income, median_rent = table_amhi_shelter_cost(geo, IsComparison = False)
  
 
 
@@ -502,7 +540,7 @@ def update_table1(geo, geo_c, selected_columns, scale):
             geo_c = geo
 
         # Generating comparison table
-        table_c = table_amhi_shelter_cost(geo_c, IsComparison = True)
+        table_c, median_income_c, median_rent_c = table_amhi_shelter_cost(geo_c, IsComparison = True)
 
         # Merging main and comparison table
         table_j = table.merge(table_c, how = 'left', on = 'Income Category')
@@ -511,34 +549,48 @@ def update_table1(geo, geo_c, selected_columns, scale):
 
         col_list = []
 
-        for i in table.columns:
+        median_row = ['Area Median Household Income', "", median_income, median_rent]
+        median_row_c = ["", median_income_c, median_rent_c]
+        # for i, j in zip(list(table.columns), median_row):
+        #     col_list.append({"name": [geo, i, j], "id": i})
+        for i, j in zip(list(table.columns), median_row):
             if i == 'Income Category':
-                col_list.append({"name": ["Area", i], "id": i})
+                col_list.append({"name": ["Area", i, j], "id": i})
             else:
-                col_list.append({"name": [geo, i], "id": i})
+                col_list.append({"name": [geo, i, j], "id": i})
+        for i, j in zip(list(table_c.columns[1:]), median_row_c):
+            col_list.append({"name": [geo_c, i, j], "id": i})
 
-        for i in table_c.columns[1:]:
-            col_list.append({"name": [geo_c, i], "id": i})
-
-        style_cell_conditional=[
-            {
-                'if': {'column_id': c},
-                'font_size': comparison_font_size,
-                'backgroundColor': columns_color_fill[1]
-            } for c in table.columns[1:]
-        ] + [
-            {
-                'if': {'column_id': c},
-                'font_size': comparison_font_size,
-                'backgroundColor': columns_color_fill[2]
-            } for c in table_c.columns[1:]
-        ] + [
-            {
-                'if': {'column_id': table.columns[0]},
-                'font_size': comparison_font_size,
-                'backgroundColor': columns_color_fill[0]
-            }
-        ]
+        style_cell_conditional = [
+                                     {
+                                         'if': {'column_id': c},
+                                         'font_size': comparison_font_size,
+                                         'backgroundColor': columns_color_fill[1]
+                                     } for c in table.columns[1:]
+                                 ] + [
+                                     {
+                                         'if': {'column_id': c},
+                                         'font_size': comparison_font_size,
+                                         'backgroundColor': columns_color_fill[2]
+                                     } for c in table_c.columns[1:]
+                                 ] + [
+                                     {
+                                         'if': {'column_id': table.columns[0]},
+                                         'font_size': comparison_font_size,
+                                         'backgroundColor': columns_color_fill[0]
+                                     }
+                                 ] + [
+                                     {
+                                         'if': {'column_id': 'Affordable Shelter Cost (2015 CAD$)'},
+                                         'maxWidth': "120px",
+                                     }
+                                 ] + [
+                                     {
+                                         'if': {'column_id': 'Income Category'},
+                                         'maxWidth': "100px",
+                                         'width': '28%'
+                                     }
+                                 ]
 
         return col_list, table_j.to_dict('record'), style_data_conditional, style_cell_conditional, style_header_conditional
 
@@ -572,6 +624,8 @@ def plot_df_core_housing_need_by_income(geo, IsComparison):
             x_list.append(x)
         i += 1
 
+    x_list = [sub.replace('$$', '$') for sub in x_list]
+    x_list = [sub.replace('.0', '') for sub in x_list]
     plot_df = pd.DataFrame({'Income_Category': x_list, 'Percent HH': joined_df_filtered[columns].T.iloc[:,0].tolist()})
 
     return plot_df
@@ -764,6 +818,8 @@ def plot_df_core_housing_need_by_amhi(geo, IsComparison):
         i += 1
 
     income_lv_list = ['20% or under', '21% to 50%', '51% to 80%', '81% to 120%', '121% or more']
+    x_list = [sub.replace('$$', '$') for sub in x_list]
+    x_list = [sub.replace('.0', '') for sub in x_list]
 
     h_hold_value = []
     hh_p_num_list_full = []
@@ -986,7 +1042,19 @@ def table_core_affordable_housing_deficit(geo, IsComparison):
             elif h == '5 or more':
                 table2[f'5+ Person HH '] = h_hold_value
             else:
-                table2[f'{h} Person HH '] = h_hold_value 
+                table2[f'{h} Person HH '] = h_hold_value
+
+    x_list = []
+    i = 0
+    for b, c in zip(x_base, x_columns):
+        if i < 4:
+            x = b + " ($" + str(int(float(joined_df_filtered[c].tolist()[0]))) + ")"
+            x_list.append(x)
+        else:
+            x = b + " (>$" + str(int(float(joined_df_filtered[c].tolist()[0]))) + ")"
+            x_list.append(x)
+        i += 1
+    table2['Income Category (Max. affordable shelter cost)'] = x_list
 
     table2['Income Category'] = [
                                 'Very low Income',
@@ -1000,9 +1068,11 @@ def table_core_affordable_housing_deficit(geo, IsComparison):
     row_total_csd = table2.sum(axis=0)
     row_total_csd[0] = 'Total'
     table2.loc[len(table2['Income Category']), :] = row_total_csd
+    table2.loc[5, 'Income Category (Max. affordable shelter cost)'] = 'Total'
     
     if IsComparison == True:
-        table2 = table2.rename(columns = {'Total': 'Total '})
+        table2 = table2.rename(columns={'Total': 'Total ', 'Income Category (Max. affordable shelter cost)':
+            'Income Category (Max. affordable shelter cost) '})
 
     return table2
 
@@ -1041,8 +1111,8 @@ def update_table2(geo, geo_c, selected_columns, scale):
 
         # Generating table
         table2 = table_core_affordable_housing_deficit(geo, False)
-        table2 = table2[['Income Category', '1 Person HH', '2 Person HH',
-                        '3 Person HH', '4 Person HH', '5+ Person HH', 'Total']]
+        table2 = table2[['Income Category (Max. affordable shelter cost)', '1 Person HH', '2 Person HH',
+                         '3 Person HH', '4 Person HH', '5+ Person HH', 'Total']]
 
         # Generating callback output to update table
         col_list = []
@@ -1058,6 +1128,11 @@ def update_table2(geo, geo_c, selected_columns, scale):
                 'if': {'column_id': table2.columns[0]},
                 'backgroundColor': columns_color_fill[0],
                 
+            }
+        ]+ [
+            {
+                'if': {'column_id': 'Income Category (Max. affordable shelter cost)'},
+                'maxWidth': "120px",
             }
         ]
 
@@ -1095,9 +1170,9 @@ def update_table2(geo, geo_c, selected_columns, scale):
         # Generating main table
 
         table2 = table_core_affordable_housing_deficit(geo, False)
-        table2 = table2[['Income Category', '1 Person HH', '2 Person HH',
-                        '3 Person HH', '4 Person HH', '5+ Person HH', 'Total']]
-
+        table2 = table2[['Income Category', 'Income Category (Max. affordable shelter cost)',
+                         '1 Person HH', '2 Person HH', '3 Person HH',
+                         '4 Person HH', '5+ Person HH', 'Total']]
 
         # Comparison Table
 
@@ -1107,55 +1182,57 @@ def update_table2(geo, geo_c, selected_columns, scale):
         # Generating comparison table
 
         table2_c = table_core_affordable_housing_deficit(geo_c, True)
-        table2_c = table2_c[['Income Category', '1 Person HH ', '2 Person HH ',
-                        '3 Person HH ', '4 Person HH ', '5+ Person HH ', 'Total ']]
+        table2_c = table2_c[['Income Category', 'Income Category (Max. affordable shelter cost) ',
+                             '1 Person HH ', '2 Person HH ', '3 Person HH ',
+                             '4 Person HH ', '5+ Person HH ', 'Total ']]
 
         # Merging main and comparison table
 
         table2_j = table2.merge(table2_c, how = 'left', on = 'Income Category')
+        new_table2_j = table2_j.iloc[:, 1:]
 
         # Generating Callback output
 
         col_list = []
 
-        for i in table2.columns:
-            if i == 'Income Category':
+        for i in table2.columns[1:]:
+            if i == 'Income Category (Max. affordable shelter cost)':
                 col_list.append({"name": ["Area", i], "id": i})
             else:
-                col_list.append({"name": [geo, i], 
-                                    "id": i, 
-                                    "type": 'numeric', 
-                                    "format": Format(
-                                                    group=Group.yes,
-                                                    scheme=Scheme.fixed,
-                                                    precision=0
-                                                    )})
+                col_list.append({"name": [geo, i],
+                                 "id": i,
+                                 "type": 'numeric',
+                                 "format": Format(
+                                     group=Group.yes,
+                                     scheme=Scheme.fixed,
+                                     precision=0
+                                 )})
 
         for i in table2_c.columns[1:]:
-            if i == 'Income Category':
-                col_list.append({"name": ["Income Category", i], "id": i})
+            if i == 'Income Category (Max. affordable shelter cost) ':
+                col_list.append({"name": ["", i], "id": i})
             else:
-                col_list.append({"name": [geo_c, i], 
-                                    "id": i, 
-                                    "type": 'numeric', 
-                                    "format": Format(
-                                                    group=Group.yes,
-                                                    scheme=Scheme.fixed,
-                                                    precision=0
-                                                    )})     
+                col_list.append({"name": [geo_c, i],
+                                 "id": i,
+                                 "type": 'numeric',
+                                 "format": Format(
+                                     group=Group.yes,
+                                     scheme=Scheme.fixed,
+                                     precision=0
+                                 )})
 
         style_cell_conditional=[
             {
                 'if': {'column_id': c},
                 'font_size': comparison_font_size,
-                'minWidth': '70px',
+                'minWidth': '75px',
                 'backgroundColor': columns_color_fill[1]
             } for c in table2.columns[1:]
         ] + [
             {
                 'if': {'column_id': c},
                 'font_size': comparison_font_size,
-                'minWidth': '70px',
+                'minWidth': '75px',
                 'backgroundColor': columns_color_fill[2]
             } for c in table2_c.columns[1:]
         ] + [
@@ -1164,9 +1241,19 @@ def update_table2(geo, geo_c, selected_columns, scale):
                 'font_size': comparison_font_size,
                 'backgroundColor': columns_color_fill[0]
             }
+        ]+ [
+            {
+                'if': {'column_id': 'Income Category (Max. affordable shelter cost)'},
+                'maxWidth': "120px",
+            }
+        ]+ [
+            {
+                'if': {'column_id': 'Income Category (Max. affordable shelter cost) '},
+                'maxWidth': "120px",
+            }
         ]
 
-        return col_list, table2_j.to_dict('record'), style_data_conditional, style_cell_conditional, style_header_conditional
+        return col_list, new_table2_j.to_dict('record'), style_data_conditional, style_cell_conditional, style_header_conditional
 
 
 
@@ -1280,6 +1367,7 @@ def update_geo_figure5(geo, geo_c, scale, refresh):
         fig5.update_layout(
                             yaxis=dict(autorange="reversed"), 
                             width = 900,
+                            height=500,
                             modebar_color = modebar_color, 
                             modebar_activecolor = modebar_activecolor, 
                             showlegend = False, 
@@ -1296,7 +1384,7 @@ def update_geo_figure5(geo, geo_c, scale, refresh):
                             )
         fig5.update_yaxes(
                             fixedrange = True, 
-                            tickfont = dict(size = 8)
+                            tickfont = dict(size = 10)
                             )
 
         return fig5
@@ -1365,6 +1453,7 @@ def update_geo_figure5(geo, geo_c, scale, refresh):
         fig5.update_layout(
                             title = 'Percentage of Households in Core Housing Need by Priority Population, 2016',
                             width = 900,
+                            height=500,
                             legend = dict(font = dict(size = 8)),
                             yaxis=dict(autorange="reversed"), 
                             modebar_color = modebar_color, 
@@ -1383,7 +1472,7 @@ def update_geo_figure5(geo, geo_c, scale, refresh):
                             )
         fig5.update_yaxes(
                             fixedrange = True, 
-                            tickfont = dict(size = 8)
+                            tickfont = dict(size = 10)
                             )
 
         return fig5
@@ -1544,7 +1633,7 @@ def update_geo_figure6(geo, geo_c, scale, refresh):
                             )
         fig6.update_yaxes(
                             fixedrange = True, 
-                            tickfont = dict(size = 8)
+                            tickfont = dict(size = 10)
                             )
 
         return fig6
@@ -1615,6 +1704,7 @@ def update_geo_figure6(geo, geo_c, scale, refresh):
         fig6.update_layout(
                             title = 'Percentage of Households in Core Housing Need by Priority Population and Income Category, 2016',
                             width = 900,
+                            height=500,
                             font = dict(size = 10), 
                             legend = dict(font = dict(size = 8)), 
                             legend_traceorder="normal", 
@@ -1634,7 +1724,7 @@ def update_geo_figure6(geo, geo_c, scale, refresh):
                             )
         fig6.update_yaxes(
                             fixedrange = True, 
-                            tickfont = dict(size = 8)
+                            tickfont = dict(size = 10)
                             )
 
         return fig6
